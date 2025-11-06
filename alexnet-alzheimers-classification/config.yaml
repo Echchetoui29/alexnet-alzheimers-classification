@@ -1,0 +1,20 @@
+# Model Configuration
+model:
+  name: "AlexNet"
+  num_classes: 4
+  input_size: 224
+  
+# Data Configuration
+data:
+  dataset_path: "./data/raw"
+  classes: ["NonDemented", "VeryMildDemented", "MildDemented", "ModerateDemented"]
+  train_ratio: 0.7
+  val_ratio: 0.15
+  test_ratio: 0.15
+  batch_size: 32
+
+# Training Configuration
+training:
+  epochs: 50
+  learning_rate: 0.001
+  device: "cuda"  # will auto-fallback to cpu if cuda not available
